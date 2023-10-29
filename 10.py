@@ -18,12 +18,10 @@ game_run = True
 field = []
 cross_count = 0
 
-# Создание стиля для кнопок
 style = ttk.Style()
 style.configure('TButton.TLabel', font=('Verdana', 30, 'bold'), width=4, height=2)
 style.configure('TButton', font=('Verdana', 30, 'bold'), width=4, height=2)
 
-# Создание виджета для отображения пометок о ничье или проигрыше
 result_label = ttk.Label(root, text='')
 result_label.grid(row=3, column=0, columnspan=3)
 
@@ -116,5 +114,5 @@ for row in range(3):
 new_button = ttk.Button(root, text='новая игра', command=new_game)
 new_button.grid(row=4, column=0, columnspan=3, sticky='nsew')
 
-root.update_idletasks()  # Обновление размеров окна перед отображением
+root.update_idletasks()
 root.mainloop()
